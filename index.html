@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Para Emanuelle 💙</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="particlesCanvas" aria-hidden="true"></canvas>
+
+  <!-- 1. TOPO DO SITE -->
+  <header class="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="container hero-content">
+      <span class="badge">Nosso Universo Azul ✨</span>
+      <h1>Para <span>Emanuelle</span></h1>
+      <p class="hero-subtitle">
+      Capsula do tempo de algumas de nossas memorias.
+      </p>
+      <button id="loveRainBtn" class="btn-primary" type="button">
+        💙 Enviar Chuva de Amor
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- 2. CONTADOR DE TEMPO JUNTOS (04/09/2026) -->
+    <section class="glass-card counter-section" aria-labelledby="counterHeading">
+      <h2 id="counterHeading">Nosso Tempo Juntos</h2>
+      <p class="date-subtitle">Desde 04 de Setembro de 2026 💙</p>
+
+      <div id="timerGrid" class="timer-grid" data-start-date="2026-09-04T00:00:00" role="timer" aria-live="off">
+        <div class="timer-box">
+          <span id="days" class="timer-num">0</span>
+          <span class="timer-label">Dias</span>
+        </div>
+        <div class="timer-box">
+          <span id="hours" class="timer-num">00</span>
+          <span class="timer-label">Horas</span>
+        </div>
+        <div class="timer-box">
+          <span id="minutes" class="timer-num">00</span>
+          <span class="timer-label">Min</span>
+        </div>
+        <div class="timer-box">
+          <span id="seconds" class="timer-num">00</span>
+          <span class="timer-label">Seg</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. GALERIA COMPLETA COM AS 20 FOTOS -->
+    <section class="gallery-section" aria-labelledby="galleryHeading">
+      <div class="section-header">
+        <h2 id="galleryHeading">Nossas 20 Memórias</h2>
+        <p class="section-sub">Toque em qualquer foto para abrir em tela cheia,veja esse site escutando reflections por favorzinho,para uma melhor experiência.</p>
+      </div>
+
+      <div id="galleryGrid" class="gallery-grid">
+        <!-- FOTO 1 -->
+        <article class="photo-card">
+          <div class="photo-frame">
+            <span class="photo-number">#1</span>
+            <img src="foto1.jpg.jpg" alt="Nosso Lanche Especial" loading="lazy" />
+          </div>
+          <div class="photo-meta">
+            <h3 class="photo-title">Nossos dates de sabado </h3>
+            <p class="photo-caption">Juro pra você que eu espero a semana inteira pelo date de sabado ,que é quando agnt tem um puta de um tempo de qualidade ,além de por as fofoca em dia e encher o buchoKAKAKAKKAKA, acho essa foto sua maravilhosa ,minha princesinha famintaKAKKAKAKAKKA.</p>
+          </div>
+        </article>
+
+        <!-- FOTO 2 -->
+        <article class="photo-card">
+          <div class="photo-frame">
+            <span class="photo-number">#2</span>
+            <img src="foto (2).jpeg" alt="Nossa Melhor Sintonia" loading="lazy" />
+          </div>
+          <div class="photo-meta">
+            <h3 class="photo-title">Pátio Matosinhos</h3>
+            <p class="photo-caption">Esse dia agnt foi no mercado com sua irmã pra fazer compras e foi simplesmente incrivel ,eu tive a certeza absoluta que eu queria viver isso pro resto da minha vida com você ,enfrentar desde a chatice de um mercado até uma noite de cozinha com você ,um vinho,uma luz amarela ,e uma pizza e uma música que agnt provavelmente estaremos dançando juntinhos KAKAKAKAKKA esse e o maior sonho da minha vida.</p>
+          </div>
+        </article>
+
+        <!-- FOTO 3 -->
+        <article class="photo-card">
+          <div class="photo-frame">
+            <span class="photo-number">#3</span>
+            <img src="foto (3).jpeg" alt="Dia de Sol Com Você" loading="lazy" />
+          </div>
+          <div class="photo-meta">
+            <h3 class="photo-title">Cachoeira do Susu</h3>
+            <p class="photo-caption">Esse dia eu me lembro vividamente,NOSSOS DOIS MESES EBAAAA foi um dia tao incrivel, o sol batendo no seu rosto destacando a beleza dele ,nossa mãe ,você ama a lua mas cai tao bem com o sol também ,e também foi a primeira vez que eu fiquei sem camisa na sua frente,eu tava tão envergonhado pq eu tenho inseguranças comigo mesmo,mas você aceitou isso e eu agr já nem sinto mais a vergonha disso até pq você gosta do meu físico KAKKAKAK e oque importa pra mim.</p>
+          </div>
+        </article>
+
+        <!-- FOTO 4 -->
+        <article class="photo-card">
+          <div class="photo-frame">
+            <span class="photo-number">#4</span>
+            <img src="foto (4).jpg" alt="Seu Jeitinho" loading="lazy" />
+          </div>
+          <div class="photo-meta">
+            <h3 class="photo-title">Minha princesinha dodói</h3>
+            <p class="photo-caption">Esse dia eu me lembro perfeitamente,a minha nené tava doentinha e eu tava tão preocupado com vc ,eu lembro q comprei um montão de chocolates pra você e ainda te dei uma cartinha e um ursinho,eu tinha acabado de voltar de aparecida do norte e tava morrendo de saudades de você ,(inclusive to morrendo de saudades agora tambémAAAAAAAAAAAAAAAAAA).</p>
+          </div>
+        </article>
+
+        <!-- FOTO 5 -->
+        <article class="photo-card">
+          <div class="photo-frame">
+            <span class="photo-number">#5</span>
+            <img src="foto (5).jpg" alt="Risadas Sem Fim" loading="lazy" />
+          </div>
+          <div class="photo-meta">
+            <h3 class="photo-title">Meu porto seguro</h3>
+            <p class="photo-caption">Domingos,geralmente chatos e tristes ,mas eu amo eles ,sabe porque?,porque normalmente eu estou com você é isso ja melhora a minha semana INTEIRINHA so pelo simples fato de ter ficado umas horinhas abraçadinho com a minha princesinha linda .</p>
+          </div>
+        </article>
+
+        <!-- FOTO 6 -->
+        <article class="photo-card">
+          <div class="photo-frame">
+            <span class="photo-number">#6</span>
+            <img src="foto (6).jpg" alt="Meu Porto Seguro" loading="lazy" />
+          </div>
+          <div class="photo-meta">
+            <h3 class="photo-title">Date da semana do saco cheio</h3>
+            <p class="photo-caption">Me lembro com belas memorias o antes desse dateKAKAKAKAKAK, eu me lembro que nesse dia agnt foi comer um burguinho la no búfallo ,que foi muito muito bom so pelo simples fato de ter você do meu lado ,aquele hamburguer tava gostoso o clima que você deixa em qualquer lugar apenas sendo a minha princesinha linda e meiga eu me sinto o cara mais feliz desse planeta inteiro tendo você do meu lado sabia?.</p>
+          </div>
+        </article>
+
+        <!-- FOTO 7 -->
+        <article class="photo-card">
+          <div class="photo-frame">
+            <span class="photo-number">#7</span>
+            <img src="foto (7).jpg" alt="Abraço Que Acalma" loading="lazy" />
+          </div>
+          <div class="photo-meta">
+            <h3 class="photo-title">Date da semana do saco cheio pt2</h3>
+            <p class="photo-caption">Essa foto foi tirada antes de irmos comer o burguinho no búfallo, e meu Deus como eu me sinto feliz e sortudo em ter você comigo ,compartilhando a sua vida e vivendo a minha comigo,eu quero você comigo para todo sempre , VOCÊ É MEU PORQUE!!!!!!!!!.</p>
+          </div>
+        </article>
+
+        <!-- FOTO 8 -->
+        <article class="photo-card">
+          <div class="photo-frame">
+            <span class="photo-number">#8</span>
+            <img src="IMG_2141.jpg" alt="Cúmplices" loading="lazy" />
+          </div>
+          <div class="photo-meta">
+            <h3 class="photo-title">Bobo Apaixonado</h3>
+            <p class="photo-caption">Essa foto e tão bonitinha , sua mãozinha segurando meu braço com esses dedinhos tao lindinhos ,eu amo tanto isso,eu lembro que nesse dia eu tinha ido na sua capoeira assistir você,e incrivel como você faz uma terça feira virar uma memória inesquecivel.</p>
+          </div>
+        </article>
+
+        <!-- FOTO 9 -->
+        <article class="photo-card">
+          <div class="photo-frame">
+            <span class="photo-number">#9</span>
+            <img src="IMG_2530.jpg" alt="Linda Demais" loading="lazy" />
+          </div>
+          <div class="photo-meta">
+            <h3 class="photo-title">Linda Demais</h3>
+            <p class="photo-caption">Eu me lembro que essa foto você odeia KAKAKAKAK mas eu amo tanto ,e tão bonitinho seu sorrisinho bobo seu cabelo tão lindo e tao cheiroso ,como eu amo seu cheirinho e seu jeitinho doce de ser.</p>
+          </div>
+        </article>
+
+        <!-- FOTO 10 -->
+        <article class="photo-card">
+          <div class="photo-frame">
+            <span class="photo-number">#10</span>
+            <img src="IMG_2532.jpg" alt="Só Nós Dois" loading="lazy" />
+          </div>
+          <div class="photo-meta">
+            <h3 class="photo-title">Semana do saco cheio</h3>
+            <p class="photo-caption">eu lembro me vividamente,de estar com você na sua casa e agnt fez um brownie tão sinistro e depois ficamos juntinhos ,eu amo cada momento com você ,você consegue transformar qualquer dia comum e tedioso no melhor dia da minha vida,so pelo fato de ser você mesma,eu te amo demais garota</p>
+          </div>
+        </article>
+
+        <!-- FOTO 11 -->
+        <article class="photo-card">
+          <div class="photo-frame">
+            <span class="photo-number">#11</span>
+            <img src="foto1 (1).jpg" alt="Olhar Encantador" loading="lazy" />
+          </div>
+          <div class="photo-meta">
+            <h3 class="photo-title">Olhar Encantador</h3>
+            <p class="photo-caption">Cada detalhe seu me deixa ainda mais apaixonado,me lembro que essa foi a vez que você veio aqui pra casa pra conhecer meus pais ,e que dia maravilhoso de bom ,eu amo viver minha vida com você seus olhos são a parte que eu mais amo em você porque são neles que eu consigo me lembrar do motivo de ter forças pra viver todos os dias ,porque eu sei que no fim de tudo vc vai estar do meu lado independente de tudo.</p>
+          </div>
+        </article>
+
+        <!-- FOTO 12 -->
+        <article class="photo-card">
+          <div class="photo-frame">
+            <span class="photo-number">#12</span>
+            <img src="foto1 (2).jpg" alt="Até no Mercado" loading="lazy" />
+          </div>
+          <div class="photo-meta">
+            <h3 class="photo-title">Nosso primeiro rolê sóbrios KAKAKKAKAKA</h3>
+            <p class="photo-caption">Esse dia ,eu me lembro muito bem que eu tava numa vergonha sinistra ao ponto de nem conseguir conversar direito com você, me lembro que coloquei essa foto no fundo do meu celular por MUITO tempoKKAKAKAKKAKAKKA,eu tenho a plena certeza que desde esse dia eu ja gostava de você. </p>
+          </div>
+        </article>
+
+        <!-- FOTO 13 -->
+        <article class="photo-card">
+          <div class="photo-frame">
+            <span class="photo-number">#13</span>
+            <img src="foto1 (3).jpg" alt="Minha Dupla no Jogo" loading="lazy" />
+          </div>
+          <div class="photo-meta">
+            <h3 class="photo-title">Rolê Aleatório do nosso primeiro date</h3>
+            <p class="photo-caption">Eu tava com tanta vegonha,Meu Deus mas eu posso dizer q eu com certeza queria te abraçar muito.eu me lembro que eu queria muito muito mesmo tocar na sua pele mas a vergonha que eu tava sentindo era intensa demais,(ate hoje eu fico com vergonha quando to com vocêKAKKAKAKAK).</p>
+          </div>
+        </article>
+
+        <!-- FOTO 14 -->
+        <article class="photo-card">
+          <div class="photo-frame">
+            <span class="photo-number">#14</span>
+            <img src="foto1 (4).jpeg" alt="Grudinhos" loading="lazy" />
+          </div>
+          <div class="photo-meta">
+            <h3 class="photo-title">Fofinhos</h3>
+            <p class="photo-caption">A primeira vez q eu beijei sua boca,logo depois essa foto saiu e ainda sim e uma das minhas favoritas,me lembro com carinho eu fiquei tao envergonhado meu pai e que eu olhava essa foto e me lembrava com tanto carinho ...</p>
+          </div>
+        </article>
+
+        <!-- FOTO 15 -->
+        <article class="photo-card">
+          <div class="photo-frame">
+            <span class="photo-number">#15</span>
+            <img src="foto1 (5).jpeg" alt="Momento Aleatório" loading="lazy" />
+          </div>
+          <div class="photo-meta">
+            <h3 class="photo-title">Essa fotoKAKAKAK</h3>
+            <p class="photo-caption">Eu me lembro que eu tava morrendo de vergonha AKAKAKKAKAporque agnt tinha acabado de dar o nosso tão sonhado primeiro beijo.</p>
+          </div>
+        </article>
+
+        <!-- FOTO 16 -->
+        <article class="photo-card">
+          <div class="photo-frame">
+            <span class="photo-number">#16</span>
+            <img src="IMG_1781.jpg" alt="Nossa Sintonia" loading="lazy" />
+          </div>
+          <div class="photo-meta">
+            <h3 class="photo-title">O meu porquê!</h3>
+            <p class="photo-caption">Eu via as fotos desse dia incrivel e pensava no quão incrivel era estar com você e desde então eu ja desenhava nosso futuro em minha cabeça!eu sempre soube que era você!.</p>
+          </div>
+        </article>
+
+        <!-- FOTO 17 -->
+        <article class="photo-card">
+          <div class="photo-frame">
+            <span class="photo-number">#17</span>
+            <img src="IMG_1782.jpg" alt="Melhor Ângulo" loading="lazy" />
+          </div>
+          <div class="photo-meta">
+            <h3 class="photo-title">Melhor Ângulo</h3>
+            <p class="photo-caption">Até nas fotos mais espontâneas você consegue ser perfeita,e eu ficava olhando tanto as fotos que você tirava pelo meu celular,com tanto carinho que você nem imagina,ja imaginei uma vida com você logo vendo essas fotinhas desse rostinho fofo e bonito.</p>
+          </div>
+        </article>
+
+        <!-- FOTO 18 -->
+        <article class="photo-card">
+          <div class="photo-frame">
+            <span class="photo-number">#18</span>
+            <img src="IMG_1788.jpg" alt="Luz Própria" loading="lazy" />
+          </div>
+          <div class="photo-meta">
+            <h3 class="photo-title">Princesa vampira</h3>
+            <p class="photo-caption"> Nesse dia agnt tava no Francisco ,por que agnt tava com vergonha e também queria muito se beijarKKAKAKAKKAKA,eu lembro que pegou meu teleco pra tirar essa foto e eu fiquei tanto tempo vendo essa foto e me apaixonando cada vez mais por você!. </p>
+          </div>
+        </article>
+
+        <!-- FOTO 19 -->
+        <article class="photo-card">
+          <div class="photo-frame">
+            <span class="photo-number">#19</span>
+            <img src="IMG_1927.jpg" alt="Combinando Até na Roupa" loading="lazy" />
+          </div>
+          <div class="photo-meta">
+            <h3 class="photo-title">Combinando Até na Roupa</h3>
+            <p class="photo-caption">Nesse dia ,agnt ia ficar pela primeira vez e saimos com roupas iguais mesmo sem marcar nada antesKAKAKKAKAk.</p>
+          </div>
+        </article>
+
+        <!-- FOTO 20 -->
+        <article class="photo-card">
+          <div class="photo-frame">
+            <span class="photo-number">#20</span>
+            <img src="IMG_2098.jpg" alt="Sempre Juntos" loading="lazy" />
+          </div>
+          <div class="photo-meta">
+            <h3 class="photo-title">Sempre Juntos</h3>
+            <p class="photo-caption">Eu tenho certeza q essa e uma das minhas fotos favoritas ,pq ela significou mt pra mim ,o contexto por trás da foto eu lembro q agnt ficou todo fofo e se pegamo pra crlh aq em casa AKKAKAKAKAAK foi incrivel ,e no fim do role ainda fomo parar na casa da sua irma e o jorginho quebrou meu  velotrol AJAJAJAJAJKAKA</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4. MOTIVOS PELOS QUAIS EU TE AMO -->
+    <section class="glass-card reasons-section" aria-labelledby="reasonsHeading">
+      <h2 id="reasonsHeading">Por que eu te amo, Emanuelle?</h2>
+      <div class="reason-display">
+        <span id="reasonCounter" class="reason-badge">Motivo #1</span>
+        <ul id="reasonsList" class="reasons-list">
+          <li class="reason-item active">Porque você transforma qualquer dia comum no meu momento favorito da semana.</li>
+          <li class="reason-item">Porque o seu sorriso ilumina tudo ao redor mais do que qualquer céu azul.</li>
+          <li class="reason-item">Porque o seu abraço é o lugar mais seguro e acolhedor do mundo.</li>
+          <li class="reason-item">Porque cada conversa com você faz o tempo passar sem eu nem perceber.</li>
+          <li class="reason-item">Porque você me inspira a ser uma pessoa melhor todos os dias.</li>
+          <li class="reason-item">Porque até o silêncio ao seu lado é perfeito.</li>
+          <li class="reason-item">Porque você tem o coração mais doce e gentil que eu já conheci.</li>
+          <li class="reason-item">Porque o som da sua risada é a minha música preferida.</li>
+          <li class="reason-item">Porque com você eu posso ser exatamente quem eu sou.</li>
+          <li class="reason-item">Porque olhar para você me dá a certeza de que fiz a melhor escolha.</li>
+        </ul>
+      </div>
+
+      <button id="nextReasonBtn" class="btn-primary" type="button">
+        ✨ Descobrir Outro Motivo
+      </button>
+    </section>
+
+    <!-- 5. CARTA ABERTA -->
+    <section class="glass-card letter-section" aria-labelledby="letterHeading">
+      <div class="letter-header">
+        <span class="letter-seal">💌</span>
+        <h2 id="letterHeading">Uma Carta Para Você</h2>
+      </div>
+      <div class="love-letter">
+        <p>Meu amor, Emanuelle,</p>
+        <p>
+          Fiz este site todo em azul porque sei o quanto você ama essa cor e porque estar com você me traz a paz que o oceano transmite ,até porque você é praticamente uma sereia neKAKAKKAKAAK.
+        </p>
+        <p>
+          Cada foto aqui em cima guarda um pedaço da nossa história, das nossas risadas e de tudo o que ainda vamos viver juntos e algumas de várias memórias que eu amo me recordar com você ,espero que lembre com o mesmo carinho que eu . Obrigado por ser minha melhor melhor amiga,minha companheira de vida, eu sou o homem mais feliz do mundo por ter o prazer de te chamar de MINHA princesa!!Muito obrigado por ser você mesma,eu te amei ontem ,eu te amo hoje , e vou te amar pelo resto de nossas vidas!!,espero te ver no altar com um véu de grinalda bem lindo viu , EU TE AMO MINHA PRINCESA!!! nada nesse mundo ,nenhuma dificuldade vai mudar oque eu sinto por você viu,espero muito que goste dessa mini homenagem que fiz a você, é simples mas juro que eu fiz de coração viuu,EU TE AMO MUITO MINHA PRINCESA!!!!!!!.
+        </p>
+        <p>Eu te amo infinitamente. 💙</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Feito com todo amor do mundo para <strong>Emanuelle</strong> 💙</p>
+  </footer>
+
+  <!-- Modal Lightbox -->
+  <div id="lightboxModal" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+    <button id="lightboxClose" class="lightbox-close" type="button" aria-label="Fechar foto">&times;</button>
+    <button id="lightboxPrev" class="lightbox-nav prev" type="button" aria-label="Foto anterior">&#10094;</button>
+    <div class="lightbox-content" id="lightboxSwipeArea">
+      <span id="lightboxIndex" class="lightbox-counter">1 / 20</span>
+      <img id="lightboxImg" src="" alt="Nossa memória" />
+      <h3 id="lightboxTitle"></h3>
+      <p id="lightboxCaption"></p>
+    </div>
+    <button id="lightboxNext" class="lightbox-nav next" type="button" aria-label="Próxima foto">&#10095;</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
